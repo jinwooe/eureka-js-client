@@ -23,11 +23,11 @@ const eureka = new Eureka({
     app: 'nodejs-service',
     hostName: '127.0.0.1',
     ipAddr: '127.0.0.1',
-    instanceId: '127.0.0.1:nodejs-service:5000',
+    instanceId: '127.0.0.1:nodejs-service:6000',
     countryId: 1,
-    statusPageUrl: 'http://127.0.0.1:5000',
+    statusPageUrl: 'http://127.0.0.1:6000',
     port: {
-      '$': 5000,
+      '$': 6000,
       '@enabled': 'true'
     },
     vipAddress: 'nodejs-service',
@@ -51,7 +51,7 @@ eureka.start(function(error){
 
 
 // ------------------ Server Config --------------------------------------------
-var server = app.listen(5000, function () {
+var server = app.listen(6000, function () {
   var host = server.address().address;
   var port = server.address().port;
   console.log('Listening at http://%s:%s', host, port);
